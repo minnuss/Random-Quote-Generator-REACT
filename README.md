@@ -8,6 +8,6 @@ TECHNOLOGIES USED:
 
 - HTML5
 - Google Fonts
-- CSS3 with Sass
+- CSS3
 - JavaScript REACT with Async Await
 - Git
