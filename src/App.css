@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 5px; /* 10px */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./images/bg.jpeg) center / cover no-repeat;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  width: 50%;
+  min-height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 5% 4%;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+
+.btn {
+  padding: 10px 25px;
+  background-color: #218c74;
+  color: #f7f1e3;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: #33d9b2;
+  color: #fff;
+  animation: up 0.3s linear;
+}
+
+small {
+  font-size: 10px;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 70%;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 415px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 380px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
